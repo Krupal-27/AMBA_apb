@@ -62,4 +62,4 @@ This project implements a complete AMBA APB (Advanced Peripheral Bus) protocol s
 - **Memory Size**: 256 bytes per slave
 - **Error Detection**: Addresses above 0xFF generate PSLVERR
 
-## 📁 Project Structure
+
