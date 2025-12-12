@@ -12,14 +12,14 @@ module apb_slave (
 );
 
     // Internal memory
-    reg [7:0] memory [255:0];
+    reg [7:0] memory [255:0]; 
 
     
     reg [7:0] addr_reg; // Stores values between clock cycles
 
     integer i;
     initial begin
-        for (i = 0; i < 256; i = i + 1) begin
+        for (i = 0; i < 256; i = i + 1) begin  // Clear The memory 
             memory[i] = 8'h00;
         end
         pready = 1'b0;
