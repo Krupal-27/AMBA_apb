@@ -57,10 +57,10 @@ module apb_master (
                 next_state = ENABLE;  // Always move to ENABLE from SETUP
             end
             ENABLE: begin
-                if (pready)
+                if (pready) // Slave is Ready  
                     next_state = (transfer) ? SETUP : IDLE;
                 else
-                    next_state = ENABLE;
+                    next_state = ENABLE; // Stay in ENABLE state until slave says ready
             end
             default: next_state = IDLE;
         endcase
